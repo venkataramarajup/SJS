@@ -57,7 +57,7 @@
                 }
               ],
               "outputHashing": "all",
-              "baseHref": "/sjs/"
+              "baseHref": "/SJS/"
             },
             "development": {
               "optimization": false,
