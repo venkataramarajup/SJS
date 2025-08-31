@@ -1,0 +1,56 @@
+
+
+.dashboard-background-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* maintain 16:9 ratio */
+  background: url('../../../assets/images/large_banner.jpg') center center / cover no-repeat;
+  display: flex;              /* flex to center content */
+  justify-content: center;    /* horizontal center */
+  align-items: center;        /* vertical center */
+  height: 400px;
+}
+
+.dashboard-quote {
+  color: yellow;
+  font-weight: bold;
+  font-size: 2rem;      /* base font size */
+  text-align: left;
+  -webkit-text-stroke: 1px rgb(245, 245, 200);
+  letter-spacing: 2px;
+  text-shadow: 0 0 5px black;
+
+  /* scale text relative to banner size */
+  width: 80%;           /* max width relative to banner */
+}
+
+
+.dashboard-quote p {
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  margin: 0.3rem 0;
+}
+
+.dashboard-quote p:nth-child(2) {
+  padding-left: 2em; /* tab space */
+}
+
+
+@media (max-width: 1024px) {
+  .dashboard-quote {
+    font-size: 1.5rem;
+  }
+  .dashboard-background-image {
+    aspect-ratio: 16 / 9; /* maintain 16:9 ratio */
+    height: 300px; /* adjust height for smaller screens */
+  }
+}
+
+@media (max-width: 767px) {
+  .dashboard-quote {
+    font-size: 1.2rem;
+  }
+  .dashboard-background-image {
+    aspect-ratio: 16 / 9; /* maintain 16:9 ratio */
+    height: 200px; /* adjust height for smaller screens */
+  }
+}

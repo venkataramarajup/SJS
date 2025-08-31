@@ -1,0 +1,112 @@
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fcf6f6;
+    color: rgb(129, 15, 15);
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.nav-links li {
+    font-size: 1em;
+}
+.nav-links a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* space between icon & text */
+    
+}
+.nav-links a:hover {
+    // color: rgb(48, 4, 4);
+    text-decoration: underline;
+    
+}
+
+.nav-links li.active a {
+    // color: rgb(48, 4, 4);
+    text-decoration: underline;
+    
+}
+
+.nav-links .dropdown {
+    list-style-type: none;
+}
+.more-menu {
+    display: none;
+    cursor: pointer;
+}
+
+/* Dropdown hidden by default */
+.dropdown {
+  display: none;
+  position: absolute;
+  right: 0; /* Align to right edge of More */
+  top: 100%; /* Below the More button */
+  background-color: white;
+  border: 1px solid #ccc;
+  min-width: 100px;
+  box-shadow: 1px 2px 8px rgba(42, 21, 2, 0.975);
+  animation: slideIn 0.3s ease forwards;
+  padding: 0;
+}
+
+.dropdown li {
+  display: block;
+}
+
+.dropdown li a {
+  padding: 10px;
+//   display: block;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.more-menu.open .dropdown {
+  display: block;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 10px;
+        /* less space between menu items */
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    .nav-links li a {
+        flex-direction: column;
+        /* icon on top, text below */
+        align-items: center;
+        /* center horizontally */
+        font-size: 0.7em;
+    }
+
+    .nav-links li i {
+        font-size: 20px;
+        /* adjust icon size for mobile */
+    }
+
+  .more-menu {
+    display: inline-block;
+    z-index: 999;
+  }
+}
+

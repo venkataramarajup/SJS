@@ -1,0 +1,59 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: var(--header-Background-Color);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain; /* keeps aspect ratio */
+  border-radius: 20%;
+}
+
+.header-text {
+  flex: 1; /* take available space between logo and whatsapp logo */
+  text-align: center;
+  font-size: 1.5rem; /* adjust as needed */
+  color: var(--brand-Name-Color);
+  font-weight: bold;
+  
+  /* Yellow outline around text */
+  -webkit-text-stroke: 1px rgb(245, 245, 200);  /* For WebKit browsers */
+  text-stroke: 1px var(--brand-Name-Stroke-Color);           /* Standard property, less supported */
+  
+  /* Optional: add a little spacing and shadow for better visibility */
+  letter-spacing: 2px;
+  text-shadow: 0 0 5px var(--black-Color)
+}
+
+.header-text span {
+  font-size: 1rem;
+  vertical-align: super;
+  line-height: 1;
+}
+
+.fa-whatsapp {
+  font-size: 30px; /* adjust size as needed */
+  color: var(--white-Color); /* icon color */
+  text-decoration: none; /* remove underline */
+  cursor: pointer;
+  &:hover {
+    color: var(--whatapp-Hover-Color); /* WhatsApp green on hover */
+  }
+}
+
+@media (max-width: 768px) {
+  .header-text {
+    margin: 10px 0; /* add some spacing on smaller screens */
+    font-size: 1rem;
+  }
+}

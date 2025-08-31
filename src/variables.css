@@ -1,0 +1,20 @@
+:root {
+    /* Brand Colors */
+    --page-Background-Color: #87646124;
+    --brand-Name-Color: white;
+    --brand-Name-Stroke-Color: yellow;
+    --brand-Name-Shadow-Color: black;
+    --Header-Footer-Text-Color: #a53e45;
+    --Card-Header-BG-Color: #9a3d35;
+    --card-Header-Text-Brand-Color: #9a3d35;
+    --white-Color: white;
+    --black-Color: black;
+    --yellow-Color: yellow;
+    --whatapp-Hover-Color: #128c7e; /* WhatsApp hover color */
+    --whatsapp-Icon-Color: white; /* WhatsApp icon color */
+    --header-Background-Color: #a53e45;
+    --global-Background-Color: #486c8e;
+
+
+
+}

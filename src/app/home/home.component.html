@@ -1,0 +1,28 @@
+<nav class="navbar">
+
+  <ul class="nav-links">
+    <li *ngFor="let link of visibleLinks" routerLinkActive="active"  [routerLinkActiveOptions]="{ exact: true }">
+      <a [routerLink]="link.route">
+      <i class="fa" [ngClass]="link.icon"></i> {{ link.label }}
+    </a>
+  </li>
+
+
+    <!-- "More" menu -->
+    <li class="more-menu" [class.open]="moreOpen" *ngIf="moreLinks.length">
+      <a (click)="toggleMore()"><i class="fa fa-bars"></i>More</a>
+      <ul class="dropdown">
+        <li *ngFor="let link of moreLinks"><a [routerLink]="link.route" (click)="toggleMore()">
+          <i class="fa" [ngClass]="link.icon"></i> {{ link.label }}
+        </a></li>
+        
+      </ul>
+    </li>
+  </ul>
+
+</nav>
+
+<div class="home-content">
+  <router-outlet></router-outlet>
+</div>
+<!-- <router-outlet></router-outlet> -->

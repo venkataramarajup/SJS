@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    
+}
+body {
+background-color: var(--page-Background-Color);
+color: var(--brand-Name-Color)
+// #ccc092
+// #b24573
+// #c4ab8c
+// #486c8e
+//#a53e45
+}
+
+.card-header {
+    // background-color: var(--Card-Header-BG-Color);
+    color: var(--card-Header-Text-Brand-Color);
+}
+
+p {
+    margin-bottom: 0;
+}
+.justified {
+    text-align: justify;
+}
