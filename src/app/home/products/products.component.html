@@ -1,21 +1,7 @@
 <div class="container">
   <div class="row g-4" >
     <div class="col-md-4 col-lg-3 col-sm-6" *ngFor="let event of products">
-      <div class="card mb-4">
-        <div class="card-header">
-          <h5 class="card-title d-inline-block text-truncate fs-6"><a href="#home/events/{{event.id}}">{{ event.title }}</a></h5>
-        </div>
-        
-        <div class="card-body">
-          <div class="card-image">
-            <a href="#/home/events/{{event.id}}"><img [src]="event.imageUrl" class="img-fluid" alt="{{event.title}}"></a>
-          </div>
-          <div class="cardEvent-details">
-            <p class="d-inline-block text-truncate" style="max-width: 100%;">{{ event.description }}</p>
-          </div>
-          
-          </div>
-    </div>
+      <sjs-common-components [productseventsData]="event" [isFromProducts]="true"></sjs-common-components>
   </div>
 </div>
 </div>

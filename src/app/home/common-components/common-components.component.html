@@ -1,0 +1,16 @@
+<div class="card mb-4">
+        <div class="card-header">
+          <h5 class="card-title d-inline-block text-truncate fs-6"><a href="#home/events/{{productseventsData.id}}">{{ productseventsData.title }}</a></h5>
+        </div>
+        
+        <div class="card-body">
+          <div class="card-image">
+            <a href="#/home/events/{{productseventsData.id}}"><img [src]="productseventsData.imageUrl" class="img-fluid" alt="{{productseventsData.title}}"></a>
+          </div>
+          <div class="cardEvent-details">
+            <p class="d-inline-block text-truncate" style="max-width: 100%;">{{ productseventsData.description }}</p>
+            <p class="card-text" *ngIf="isFromEvents"><small class="text-muted fw-bold">{{ productseventsData.date | date:'longDate' }}</small></p>
+          </div>
+          
+          </div>
+    </div>
